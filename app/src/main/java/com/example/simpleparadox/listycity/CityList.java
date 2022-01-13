@@ -32,5 +32,14 @@ public class CityList {
         Collections.sort(list);
         return list;
     }
+    public void delete(City city){
+        if(!cities.contains(city)){
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+    }
+    public int listsize(){
+        return cities.size();
+    }
 
 }
